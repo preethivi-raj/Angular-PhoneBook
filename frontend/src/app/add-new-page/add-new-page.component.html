@@ -1,0 +1,45 @@
+<div class="App">
+    <div class="card bg-neutral text-neutral-content w-96" >
+        <h2 class="flex justify-center font-semibold text-2xl p-3 text-green-400 ">Add New User</h2>
+         <form class='App'>
+             <div>
+             <label htmlFor="name"  class="font-serif ">Enter the name</label>
+             <input 
+              [(ngModel)]="newUser.name"
+               class="input input-bordered input-success w-full max-w-xs"
+              type="text" 
+              name="name"
+              required
+              />
+             </div>
+    
+             <div class='p-2'>
+             <label htmlFor="email" class="font-serif">Enter the Email</label>
+             <input
+             [(ngModel)]="newUser.email"
+               class="input input-bordered input-success w-full max-w-xs"
+              type="text" 
+              required
+              name="email"
+              />
+             </div>
+    
+             
+             <div class='ml-10'>
+             <label htmlFor="phoneNumber" class="font-serif">Enter the Phone Number</label>
+             <input
+             [(ngModel)]="newUser.phoneNumber"
+              class="input input-bordered input-success w-76 max-w-xs"
+              type="text" 
+              required
+              name="phoneNumber"
+              />
+    
+             </div>
+              <div class='p-2'>
+              <button  (click)="onAdd()" class="btn btn-outline btn-secondary">Add</button>
+              </div>
+             
+         </form>
+      </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="App">
+    <div class=" card bg-neutral text-neutral-content w-96">
+        <h2 class="flex justify-center font-semibold text-2xl p-3 text-orange-300 ">Update User</h2>
+         <form class='App'  (submit)="onSubmit()" >
+             <div>
+             <label htmlFor="name" class="font-serif">Enter the name</label>
+             <input 
+              type="text" 
+              class="input input-bordered input-warning w-full max-w-xs"
+              name="name"
+              required
+              
+              [(ngModel)]="newUser.name"
+              />
+             </div>
+    
+             <div class='p-2'>
+             <label htmlFor="email" class="font-serif">Enter the Email</label>
+             <input
+              type="text" 
+              class="input input-bordered input-warning w-full max-w-xs"
+              name="email"
+              required
+              [(ngModel)]="newUser.email"
+            
+              />
+             </div>
+    
+             <div class='ml-10'>
+             <label htmlFor="phoneNumber" class="font-serif">Enter the Phone Number</label>
+             <input
+              type="text" 
+              class="input input-bordered input-warning w-76 max-w-xs"
+              name="phoneNumber"
+              required
+             
+              [(ngModel)]="newUser.phoneNumber"
+              />
+             </div>
+     
+            <div class='p-2'>
+            <button  class="btn btn-outline  btn-secondary">Update</button>
+             
+            </div>
+         </form>
+      </div>
+</div>
