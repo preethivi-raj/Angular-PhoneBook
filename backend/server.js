@@ -18,12 +18,7 @@ app.use(express.json())
 app.use("/user" , userRoutes)
 
 
-if(process.env.NODE_ENV == "production"){
-    app.use(express.static(path.join(__dirname , "/frontend/build")))
-    app.get("*" , (req , res)=>{
-        res.sendFile(path.join(__dirname , "/frontend/build/index.html"))
-    })
-}
+
 
 app.listen( process.env.PORT , ()=>{
     console.log(`Server is Runing on ${process.env.PORT}`)
